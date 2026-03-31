@@ -160,8 +160,10 @@ export const projectsData: Project[] = [
       "A sleek and responsive music player web application that allows users to play, pause, and skip tracks. Built with HTML, CSS, and JavaScript.",
     tech: ["HTML", "CSS", "JavaScript"],
     imageUrl: "./images/image.png",
-    demoUrl: "https://pawanbudati.github.io/music-player/",
-    githubUrl: "https://github.com/thughari/music-player",
+    /**
+     *     demoUrl: "https://pawanbudati.github.io/music-player/",
+        githubUrl: "https://github.com/thughari/music-player",
+    */
   },
   //Reactive Microservices for High-Volume Data Optimization (GxCapture)
   {
