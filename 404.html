@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    // SPA fallback for GitHub Pages: any missing route should serve the app root
+    const current = window.location.pathname;
+    if (current !== '/') {
+      // Preserve the root app display and avoid 404 screen state.
+      history.replaceState(null, '', '/');
+    }
+    // Immediately redirect to index.html via location, handling strict page-refresh path.
+    window.location.replace('/');
+  </script>
+</head>
+<body>
+  Redirecting to home...
+</body>
+</html>
