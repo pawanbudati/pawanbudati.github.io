@@ -1,7 +1,7 @@
-# 🌐 Hari’s Interactive AI Portfolio
+# 🌐 Pavan’s Interactive AI Portfolio
 
 🚀 **Live Website:** https://pawanbudati.github.io  
-📦 **Repository:** https://github.com/thughari/pawanbudati.github.io
+📦 **Repository:** https://github.com/pawanbudati/pawanbudati.github.io
 
 This is **not a static portfolio**.
 
@@ -117,7 +117,7 @@ It can:
 - **Trigger contact actions directly from chat**
 
 Example:
-> “Send Hari a message saying I’m interested in collaborating.”
+> “Send Pavan a message saying I’m interested in collaborating.”
 
 The AI handles the submission without the user touching the form.
 
@@ -168,8 +168,8 @@ function doPost(data) {
     `Submitted on: ${timestamp}`;
 
   MailApp.sendEmail({
-    to: "haribabutatikonda3@gmail.com",
-    cc: "thughari3@gmail.com",
+    to: "pawanbudati@gmail.com",
+    cc: "pawan1122143@gmail.com",
     subject: subject,
     body: body
   });
