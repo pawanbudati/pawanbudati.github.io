@@ -77,6 +77,18 @@ export const experienceData: ExperienceItem[] = [
       "Contributed SOAP/REST integrations and Kafka-based async communication patterns for a low-code test platform.",
     ],
   },
+  {
+    role: "Developer Trainee",
+    company: "EXNOR Technologies",
+    period: "Apr 2021 - Jun 2022",
+    location: "Bangalore, India",
+    points: [
+      "Contributed to feature development and bug fixes on existing enterprise products using Java and the Spring Framework, gaining hands-on experience in server-side application development.",
+      "Developed and optimized SQL queries for data retrieval, manipulation, and reporting; worked with relational databases to support backend business logic and application data layers.",
+      "Collaborated closely with senior developers to understand product architecture, implement assigned modules, and adhere to established coding standards and best practices.",
+      "Gained foundational expertise in OOP principles, Spring MVC, and JDBC, building a strong base for enterprise Java development that supported rapid growth into full-stack engineering roles."
+    ],
+  },
 ];
 
 export const educationData = {
