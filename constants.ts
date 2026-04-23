@@ -79,7 +79,7 @@ export const experienceData: ExperienceItem[] = [
   },
   {
     role: "Developer Trainee",
-    company: "EXNOR Technologies",
+    company: "EXNER Technologies",
     period: "Apr 2021 - Jun 2022",
     location: "Bangalore, India",
     points: [
