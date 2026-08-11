@@ -9,7 +9,6 @@ import {
 import {
   CodeIcon,
   ServerIcon,
-  DatabaseIcon,
   ToolIcon,
   StarIcon,
   RepoIcon,
