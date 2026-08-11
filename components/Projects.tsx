@@ -104,28 +104,38 @@ const Projects: React.FC = () => {
             </div>
 
             <div className="p-6 flex-grow flex flex-col">
-              <div className="flex justify-between items-start mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-4">
                 <h3 className="text-2xl font-bold text-slate-100 group-hover:text-spidey-red transition-colors duration-300">{project.title}</h3>
 
-                <div className="flex items-center space-x-3 z-10">
+                <div className="flex flex-wrap items-center gap-2 z-10 shrink-0">
+                  {project.demoUrl && (
+                    <a
+                      onClick={(e) => { e.stopPropagation(); openInNewTab(project.demoUrl); }}
+                      className="px-2.5 py-1 text-xs font-semibold rounded-md bg-spidey-red/20 text-spidey-red border border-spidey-red/40 hover:bg-spidey-red hover:text-white transition-all duration-200 flex items-center gap-1.5 cursor-pointer shadow-sm"
+                      aria-label="Open live demo"
+                    >
+                      <ExternalLinkIcon /> <span>Live Demo</span>
+                    </a>
+                  )}
+
                   {project.githubUrls ? (
                     <>
                       {project.githubUrls.frontend && (
                         <a
                           onClick={(e) => { e.stopPropagation(); openInNewTab(project.githubUrls?.frontend); }}
-                          className="text-slate-400 hover:text-spidey-red transition-colors cursor-pointer flex items-center gap-1"
+                          className="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500 hover:text-white transition-all duration-200 flex items-center gap-1.5 cursor-pointer shadow-sm"
                           title="Frontend Repository"
                         >
-                          <GitHubIcon /> <span className="text-[10px] font-bold">FE</span>
+                          <GitHubIcon /> <span>Frontend</span>
                         </a>
                       )}
                       {project.githubUrls.backend && (
                         <a
                           onClick={(e) => { e.stopPropagation(); openInNewTab(project.githubUrls?.backend); }}
-                          className="text-slate-400 hover:text-spidey-red transition-colors cursor-pointer flex items-center gap-1"
+                          className="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500 hover:text-white transition-all duration-200 flex items-center gap-1.5 cursor-pointer shadow-sm"
                           title="Backend Repository"
                         >
-                          <GitHubIcon /> <span className="text-[10px] font-bold">BE</span>
+                          <GitHubIcon /> <span>Backend</span>
                         </a>
                       )}
                     </>
@@ -133,18 +143,12 @@ const Projects: React.FC = () => {
                     project.githubUrl && (
                       <a
                         onClick={(e) => { e.stopPropagation(); openInNewTab(project.githubUrl); }}
-                        className="text-slate-400 hover:text-spidey-red transition-colors cursor-pointer"
+                        className="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500 hover:text-white transition-all duration-200 flex items-center gap-1.5 cursor-pointer shadow-sm"
                         aria-label="Open GitHub repo"
                       >
-                        <GitHubIcon />
+                        <GitHubIcon /> <span>Code</span>
                       </a>
                     )
-                  )}
-
-                  {project.demoUrl && (
-                    <a onClick={(e) => { e.stopPropagation(); openInNewTab(project.demoUrl); }} className="text-slate-400 hover:text-spidey-red transition-colors cursor-pointer" aria-label="Open demo">
-                      <ExternalLinkIcon />
-                    </a>
                   )}
                 </div>
               </div>

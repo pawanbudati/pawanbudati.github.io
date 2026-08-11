@@ -35,10 +35,10 @@ const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p>
-              Hello! I'm {personalInfo.name}, a Java Full Stack Developer with roughly four years of experience delivering secure, scalable microservices and React experiences across healthcare, banking, logistics, and automotive domains.
+              Hello! I'm {personalInfo.name}, a Lead Full Stack Developer with hands-on experience in Java (8/21), Spring Boot, Microservices, and React JS. I specialize in delivering scalable, secure, and high-performance enterprise applications across telecom payments, healthcare, banking, logistics, and trading execution domains.
             </p>
             <p>
-              I love pairing Spring Boot (including WebFlux and security) with modern React, hardening APIs with JWT/OAuth2, and tuning data stores. Recently I've been integrating AI tools like GitHub Copilot to speed code reviews and automated tests while keeping quality high.
+              My expertise spans OOP principles, Spring internals, encryption/decryption protocols (AES/RSA), RESTful API design, and cloud deployments using AWS, Helm, and GitLab CI/CD. I leverage modern GenAI tools like Claude AI, GitHub Copilot, and Copilot Spaces to accelerate engineering productivity, optimize transaction pipelines, and drive quality software products.
             </p>
           </motion.div>
           <motion.div
