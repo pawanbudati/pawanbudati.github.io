@@ -34,6 +34,19 @@ const Experience: React.FC = () => {
                         <li key={i}>{point}</li>
                       ))}
                     </ul>
+
+                    {item.tech && (
+                      <div className="mt-4 pt-3 border-t border-slate-700/60 flex flex-wrap gap-1.5">
+                        {item.tech.map((t, idx) => (
+                          <span
+                            key={idx}
+                            className="bg-slate-800/90 text-spidey-red text-[11px] font-semibold px-2.5 py-0.5 rounded-md border border-spidey-red/20"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

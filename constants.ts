@@ -5,6 +5,7 @@ import {
   GitHubStat,
   TopLanguage,
   Certification,
+  MetricItem,
 } from './types.ts';
 import {
   CodeIcon,
@@ -36,6 +37,13 @@ export const personalInfo = {
   handle: "pavan-budati",
 };
 
+export const metricsData: MetricItem[] = [
+  { value: "4+ Yrs", label: "Full Stack Experience", description: "Across Telecom, Trading, Healthcare, & Banking" },
+  { value: "2x", label: "Throughput Boost", description: "Engineered via Java 21 Virtual Threads & Async dispatches" },
+  { value: "50%", label: "Page Load Speedup", description: "Achieved with Spring WebFlux & R2DBC reactive pipelines" },
+  { value: "80%+", label: "Test Coverage", description: "Sustained with Copilot Spaces & JUnit test automation" },
+];
+
 export const experienceData: ExperienceItem[] = [
   {
     role: "Lead I - Software Engineer",
@@ -50,6 +58,7 @@ export const experienceData: ExperienceItem[] = [
       "Established automated CI/CD pipelines using GitLab, enforcing rigorous code scanning, automated testing, and zero-downtime deployment strategies.",
       "Leveraged Claude AI to assist in rapid technical design prototyping, refactoring legacy payment logic, and generating comprehensive unit/integration test suites.",
     ],
+    tech: ["Java 21", "Spring Boot", "React JS", "AES/RSA", "AWS", "Helm", "Kubernetes", "GitLab CI/CD", "Claude AI"],
   },
   {
     role: "Java Full Stack Developer (Consultant)",
@@ -63,6 +72,7 @@ export const experienceData: ExperienceItem[] = [
       "Deployed and managed microservices on AWS EC2, configuring security groups, IAM roles, and Auto Scaling policies.",
       "Utilized AWS Lambda, API Gateway, S3, and RDS (PostgreSQL) for event-driven serverless workflows and secure document storage.",
     ],
+    tech: ["Java", "Spring Boot", "PostgreSQL", "React JS", "AWS EC2", "Lambda", "S3", "GitHub Copilot"],
   },
   {
     role: "Senior Java Full Stack Developer",
@@ -77,6 +87,7 @@ export const experienceData: ExperienceItem[] = [
       "Built a containerized mainframe test automation framework (Java, Docker, Socket Programming, X3270 emulator), enabling execution preview across 100% of test cases (GxQuality).",
       "Contributed to a low-code testing platform supporting Web, REST, ETL, and Mainframe using SOAP/REST APIs and Kafka.",
     ],
+    tech: ["Java 21", "Spring WebFlux", "R2DBC", "Spring Security", "GraphQL", "React JS", "Virtual Threads", "Kafka", "Docker"],
   },
   {
     role: "Developer Trainee",
@@ -87,6 +98,7 @@ export const experienceData: ExperienceItem[] = [
       "Contributed to enterprise product development using Java, Spring Framework, SQL, and JDBC.",
       "Optimized database queries and worked with relational schemas to support backend application logic.",
     ],
+    tech: ["Java", "Spring Framework", "SQL", "JDBC"],
   },
 ];
 
@@ -114,6 +126,7 @@ export const projectsData: Project[] = [
       "WebSockets",
       "Lightweight Charts",
     ],
+    category: "Trading & Low Latency",
     imageUrl: "./images/jwt-spring-security.png",
     demoUrl: "https://pawanbudati.github.io/neo-copier",
     githubUrls: {
@@ -136,6 +149,7 @@ export const projectsData: Project[] = [
       "IPC",
       "CPU Spin-Lock",
     ],
+    category: "Trading & Low Latency",
     imageUrl: "./images/rbc-demo.gif",
     demoUrl: "https://pawanbudati.github.io/order-schedular-xm",
     githubUrls: {
@@ -159,6 +173,7 @@ export const projectsData: Project[] = [
       "Kubernetes",
       "GitLab CI/CD",
     ],
+    category: "Microservices & Security",
     imageUrl: "./images/jwt-spring-security.png",
   },
   // Reactive Microservices for High-Volume Data Optimization (GxCapture)
@@ -176,6 +191,7 @@ export const projectsData: Project[] = [
       "Docker",
       "React",
     ],
+    category: "Microservices & Security",
     imageUrl: "./images/spring_webflux_reactive_pipeline.svg",
   },
   // Spring Security + JWT API Platform with RBAC
@@ -192,6 +208,7 @@ export const projectsData: Project[] = [
       "RBAC",
       "REST APIs",
     ],
+    category: "Microservices & Security",
     imageUrl: "./images/jwt-spring-security.png",
   },
   // MainframeDriver - Selenium-Architecture Automation Library
@@ -207,6 +224,7 @@ export const projectsData: Project[] = [
       "Docker",
       "Selenium Architecture",
     ],
+    category: "AI & Automation",
     imageUrl: "./images/mainframe.png",
     githubUrl: "https://github.com/pawanbudati/mainframe-automate",
   },
@@ -223,6 +241,7 @@ export const projectsData: Project[] = [
       "Virtual Threads",
       "JavaScript",
     ],
+    category: "AI & Automation",
     imageUrl: "./images/randomchat.png",
     demoUrl: "https://randomchat-hfta.onrender.com/",
     githubUrl: "https://github.com/pawanbudati/RandomChat",

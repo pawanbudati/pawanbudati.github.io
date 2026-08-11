@@ -4,12 +4,20 @@ export interface ExperienceItem {
   period: string;
   location: string;
   points: string[];
+  tech?: string[];
+}
+
+export interface MetricItem {
+  value: string;
+  label: string;
+  description: string;
 }
 
 export interface Project {
   title: string;
   description: string;
   tech: string[];
+  category?: 'Trading & Low Latency' | 'Microservices & Security' | 'AI & Automation';
   preview?: boolean;
   imageUrl: string;
   demoUrl?: string;

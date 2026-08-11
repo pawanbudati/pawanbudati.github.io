@@ -19,8 +19,11 @@ const modalPanel = {
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.18 } },
 };
 
+const categories = ['All', 'Trading & Low Latency', 'Microservices & Security', 'AI & Automation'];
+
 const Projects: React.FC = () => {
   const [selected, setSelected] = useState<Project | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>('All');
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const [iframeMaybeBlocked, setIframeMaybeBlocked] = useState(false);
 
@@ -59,10 +62,14 @@ const Projects: React.FC = () => {
     return project.demoUrl || project.githubUrl || project.githubUrls?.frontend || project.githubUrls?.backend;
   };
 
+  const filteredProjects = activeCategory === 'All'
+    ? projectsData
+    : projectsData.filter(p => p.category === activeCategory);
+
   return (
     <>
       <motion.h2
-        className="text-4xl font-bold text-center mb-16"
+        className="text-4xl font-bold text-center mb-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -71,8 +78,25 @@ const Projects: React.FC = () => {
         Featured <span className="gradient-text">Projects & Works</span>
       </motion.h2>
 
+      {/* Category Filter Pills */}
+      <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
+            className={`px-4 py-2 text-xs md:text-sm font-semibold rounded-full transition-all duration-300 ${
+              activeCategory === cat
+                ? 'bg-spidey-red text-white shadow-lg shadow-red-600/30'
+                : 'bg-slate-800/80 text-slate-300 border border-slate-700 hover:border-slate-500 hover:text-white'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectsData.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
             className="glass-card rounded-xl overflow-hidden flex flex-col group cursor-pointer"
