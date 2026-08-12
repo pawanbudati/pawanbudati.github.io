@@ -38,7 +38,7 @@ export const personalInfo = {
 };
 
 export const metricsData: MetricItem[] = [
-  { value: "4+ Yrs", label: "Full Stack Experience", description: "Across Telecom, Trading, Healthcare, & Banking" },
+  { value: "5+ Yrs", label: "Full Stack Experience", description: "Across Telecom, Trading, Healthcare, & Banking" },
   { value: "2x", label: "Throughput Boost", description: "Engineered via Java 21 Virtual Threads & Async dispatches" },
   { value: "50%", label: "Page Load Speedup", description: "Achieved with Spring WebFlux & R2DBC reactive pipelines" },
   { value: "80%+", label: "Test Coverage", description: "Sustained with Copilot Spaces & JUnit test automation" },
